@@ -27,7 +27,7 @@
 
         .container { padding: 20px; }
 
-        /* Стили карточек заметок */
+       
         .notes-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -129,7 +129,7 @@
 
     <div class="container">
         <section class="api-section">
-            <h3 id="form-title">📝 Create New Note</h3>
+            <h3 id="form-title"> Create New Note</h3>
             <form id="noteForm">
                 <input type="hidden" id="noteId">
                 <div class="form-group">
@@ -155,7 +155,7 @@
         </section>
 
         <section class="api-section">
-            <h3>🔍 Search & Filters</h3>
+            <h3> Search & Filters</h3>
             <div class="search-bar">
                 <div class="form-group">
                     <label>Keyword</label>
@@ -190,7 +190,7 @@
     <script>
         const API_URL = '/api/notes';
 
-        // 1. GET ALL NOTES & RENDER CARDS
+      
         async function getAllNotes() {
             const category = document.getElementById('filterCategory').value;
             const search = document.getElementById('searchText').value;
@@ -239,7 +239,7 @@
             });
         }
 
-        // 2. CREATE or UPDATE
+        
         document.getElementById('noteForm').addEventListener('submit', async (e) => {
             e.preventDefault();
             const id = document.getElementById('noteId').value;
@@ -268,7 +268,7 @@
             }
         });
 
-        // 3. DELETE
+        
         async function deleteNote(id) {
             if (confirm('Delete this note forever?')) {
                 await fetch(`${API_URL}/${id}`, { method: 'DELETE' });
@@ -276,14 +276,14 @@
             }
         }
 
-        // Helpers
+        
         function editNote(id, title, content, category) {
             document.getElementById('noteId').value = id;
             document.getElementById('title').value = title;
             document.getElementById('content').value = content;
             document.getElementById('category').value = category;
             
-            document.getElementById('form-title').innerText = "✏️ Update Note";
+            document.getElementById('form-title').innerText = " Update Note";
             document.getElementById('submitBtn').innerText = "Update Note";
             document.getElementById('cancelBtn').style.display = "inline-block";
             window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -292,12 +292,12 @@
         function resetForm() {
             document.getElementById('noteId').value = '';
             document.getElementById('noteForm').reset();
-            document.getElementById('form-title').innerText = "📝 Create New Note";
+            document.getElementById('form-title').innerText = " Create New Note";
             document.getElementById('submitBtn').innerText = "Create Note";
             document.getElementById('cancelBtn').style.display = "none";
         }
 
-        // Load data on start
+        
         window.onload = getAllNotes;
     </script>
 </body>

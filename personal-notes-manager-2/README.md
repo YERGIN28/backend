@@ -236,5 +236,21 @@ personal-notes-manager/
 * Week 2: Forms and POST routes ✅
 * Week 3: Database integration (SQLite) ✅
 * Week 4: CRUD operations for Notes API ✅
-* Week 5: Final validation & improvements 
 
+
+
+
+## NEW: Assignment 3 - Cloud Integration & Deployment
+Status: COMPLETED 
+
+This is the final stage of the project, where the application was moved to a professional cloud infrastructure.
+
+Live Application URL: https://pesonal-notes-manager.onrender.com
+
+Database: MongoDB Atlas (Cloud) with native Node.js driver.
+
+Deployment: Hosted on Render.com.
+
+Security: Environment variables (.env) for sensitive database credentials.
+
+UI Dashboard: Interactive frontend with dynamic note cards, live search, and full CRUD via Fetch API.
