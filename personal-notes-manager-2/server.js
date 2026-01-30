@@ -7,7 +7,7 @@ const notesRouter = require('./routes/notes');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Middleware
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));
@@ -63,8 +63,8 @@ async function startServer() {
         
       
         app.listen(PORT, () => {
-            console.log(`✓ Server running on http://localhost:${PORT}`);
-            console.log(`✓ API available at http://localhost:${PORT}/api/notes`);
+            console.log(` Server running on http://localhost:${PORT}`);
+            console.log(` API available at http://localhost:${PORT}/api/notes`);
         });
     } catch (error) {
         console.error('✗ Failed to start server:', error);
